@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    /* Diretórios */
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* Ambiente */
+    "module": "commonjs",         
+    "target": "es2016",
+    "esModuleInterop": true,
+
+    /* Geração de arquivos auxiliares */
+    "sourceMap": true,
+    "declaration": false,        
+    "declarationMap": false,
+
+    /* Regras de tipagem */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* Outras opções */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
