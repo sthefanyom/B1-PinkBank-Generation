@@ -1,21 +1,25 @@
-import { Conta } from "./conta";
+import { Conta } from "./Conta";
 
 export class ContaPoupanca extends Conta {
-  private rendimento: number; // em percentual (%)
 
-  constructor(numero: number, titular: string, saldoInicial: number, rendimento: number) {
-    super(numero, titular, saldoInicial);
-    this.rendimento = rendimento;
-  }
+    private _aniversario: number;
 
-  public aplicarRendimento(): void {
-    const ganho = this.saldo * (this.rendimento / 100);
-    this.saldo += ganho;
-    console.log(`Rendimento de R$${ganho.toFixed(2)} aplicado!`);
-  }
+    constructor(numero: number, agencia: number, tipo: number, titular: string, 
+        saldo: number, aniversario: number) {
+        super(numero, agencia, tipo, titular, saldo);
+        this._aniversario = aniversario;
+    }
+    public get aniversario() {
+        return this._aniversario;
+    }
 
-  public visualizarDados(): void {
-    super.visualizarDados();
-    console.log(`Taxa de rendimento: ${this.rendimento}%`);
-  }
+    public set aniversario(aniversario: number) {
+        this._aniversario = aniversario;
+    }
+
+    public visualizar(): void {
+        super.visualizar();
+        console.log("Dia do aniversário: " + this._aniversario);
+    }
+
 }

@@ -1,27 +1,22 @@
 {
   "compilerOptions": {
-    /* Diretórios */
-    "rootDir": "./src",
-    "outDir": "./dist",
-
-    /* Ambiente */
-    "module": "commonjs",         
+    "module": "commonjs",
     "target": "es2016",
-    "esModuleInterop": true,
+    "types": ["node"],
 
-    /* Geração de arquivos auxiliares */
     "sourceMap": true,
-    "declaration": false,        
-    "declarationMap": false,
+    "declaration": true,
+    "declarationMap": true,
 
-    /* Regras de tipagem */
-    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
 
-    /* Outras opções */
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
-  },
-  "include": ["src"]
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": false,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+  }
 }

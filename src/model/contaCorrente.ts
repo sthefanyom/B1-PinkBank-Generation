@@ -1,24 +1,37 @@
-import { Conta } from "./conta";
+import { Conta } from "./Conta"
 
+//Criando a Classe Filha da Conta
 export class ContaCorrente extends Conta {
-  private limite: number;
 
-  constructor(numero: number, titular: string, saldoInicial: number, limite: number) {
-    super(numero, titular, saldoInicial);
-    this.limite = limite;
-  }
+    private _limite: number
 
-  public sacar(valor: number): void {
-    if (valor > 0 && valor <= this.saldo + this.limite) {
-      this.saldo -= valor;
-      console.log(`Saque de R$${valor} realizado com sucesso! (com limite)`);
-    } else {
-      console.log("Saldo insuficiente mesmo com limite.");
+    constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number, limite: number) {
+        super( numero, agencia, tipo, titular, saldo)
+        this._limite = limite
     }
-  }
 
-  public visualizarDados(): void {
-    super.visualizarDados();
-    console.log(`Limite disponível: R$${this.limite}`);
-  }
+//Criando Get e Set da Classe Filha
+public get limite() {
+    return this._limite
+    }
+
+public set limite(limite: number) {
+    this.limite = limite
+    }
+
+//Criando Método Específico
+public sacar (valor: number): boolean {
+    if((this.saldo + this._limite) < valor) {
+        console.log ("\n Saldo Insuficiente!")
+        return false
+    }
+    this.saldo = this.saldo - valor
+        return true
 }
+
+public visualizar(): void {
+    super.visualizar()
+    console.log("limite: " + this._limite.toFixed(2))
+
+}
+    }

@@ -6,9 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sthefanyom/B1-PinkBank-Generation.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sthefanyom/B1-PinkBank-Generation/issues"
+  },
+  "homepage": "https://github.com/sthefanyom/B1-PinkBank-Generation#readme",
   "dependencies": {
     "@types/node": "^24.3.0",
     "readline-sync": "^1.4.10"
