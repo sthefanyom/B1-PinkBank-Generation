@@ -10,21 +10,6 @@ class Colors {
     static WHITE = "\x1b[97m" 
 }
 
-function sobre(): void {
-    console.log(Colors.PINK + "**********************************" + Colors.RESET)
-    console.log(Colors.PINK + "        BANCO - PINK BANK  🐽  " + Colors.RESET)
-    console.log(Colors.PINK + "**********************************" + Colors.RESET)
-    console.log(Colors.PINK + "Desenvolvido por: Sthefany O Mattos" + Colors.RESET)
-    console.log(Colors.PINK + "GitHub: @Sthefanyom" + Colors.RESET)
-    console.log(Colors.PINK +"Contato: om.sthefany@gmail.com" + Colors.RESET)
-    console.log(Colors.PINK + "**********************************" + Colors.RESET)
-}
-
-function keyPress(): void {
-    console.log(Colors.RESET, "")
-    console.log("Pressione ENTER para continuar...")
-    readlinesync.prompt()
-}
 export function main() {
     let opcao: number;
 
@@ -108,6 +93,20 @@ export function main() {
                 break;
         }
     }
+    function sobre(): void {
+    console.log(Colors.PINK + "**********************************" + Colors.RESET)
+    console.log(Colors.PINK + "        BANCO - PINK BANK  🐽  " + Colors.RESET)
+    console.log(Colors.PINK + "**********************************" + Colors.RESET)
+    console.log(Colors.PINK + "Desenvolvido por: Sthefany O Mattos" + Colors.RESET)
+    console.log(Colors.PINK + "GitHub: @Sthefanyom" + Colors.RESET)
+    console.log(Colors.PINK +"Contato: om.sthefany@gmail.com" + Colors.RESET)
+    console.log(Colors.PINK + "**********************************" + Colors.RESET)
+}
+function keyPress(): void {
+    console.log(Colors.RESET, "")
+    console.log("Pressione ENTER para continuar...")
+    readlinesync.prompt()
+}
 }
 
 main()
