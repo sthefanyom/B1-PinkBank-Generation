@@ -40,4 +40,11 @@ export const colors = {
         cyanbright: "\x1b[0;106m",
         whitebright: "\x1b[0;107m"
     }
-};
+    
+}
+
+export class Colors {
+    static RESET = "\x1b[0m"
+    static PINK = "\x1b[95m"
+    static WHITE = "\x1b[97m" 
+}
